@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In your CSS file (e.g., App.css or index.css) */
+@font-face {
+  font-family: 'CalgaryDemo';
+  src: url('C:\Users\MTL1013\Desktop\task\sive\sive\frontend\src\assets\fonts\calgarydemo\Calgary_DEMO.ttf') format('truetype');
+}
+
+
+/* Apply CalgaryDemo font only to headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'CalgaryDemo', sans-serif;
+  }
+  
+  @font-face {
+    font-family: 'MayfestRegular';
+    src: url('C:/Users/MTL1013/Desktop/task/sive/sive/frontend/src/assets/fonts/Mayfest_Regular - Demo.ttf') format('truetype');
+}
+
+/* Apply MayfestRegular font to all paragraphs */
+p, span,*{
+    font-family: 'MayfestRegular', sans-serif;
+}

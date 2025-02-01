@@ -1,0 +1,144 @@
+/* MenuStyles.css */
+.Sive_logo {
+  height: 70px;
+  width: auto;
+}
+
+.menu-wrapper {
+  position: fixed;
+  z-index: 1000;
+  cursor: move;
+  width: auto;
+  height: auto;
+}
+
+.menu-nav {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg); /* Rotating the entire nav-content */
+}
+
+.nav-content .toggle-btn,
+.nav-content span a {
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-content .toggle-btn {
+  font-size: 35px;
+  color: #0e2431;
+  z-index: 100;
+  transform: rotate(45deg); /* Reset the button rotation when the menu is open */
+  cursor: pointer;
+  transition: all 0.6s ease;
+  position: relative;
+}
+
+.nav-content p {
+  font-size: 14px;
+  z-index: 2;
+  color: #0e2431;
+  margin: 0;
+  transform: none; /* Prevent the text from rotating */
+}
+
+.menu-Btn-Img {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-nav.open .toggle-btn {
+  transform: rotate(-225deg); /* Rotate the button */
+ 
+}
+
+.nav-content span {
+  position: absolute;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: none; /* Prevent span from rotating */
+}
+
+.menu-nav.open .nav-content span {
+  opacity: 1;
+}
+
+.menu-nav.open .middleLeft span {
+  transform: rotate(calc(var(--i) * (360deg / -8))) translateX(-120px);
+}
+
+.menu-nav.open .nav-content span p{
+
+  transform: rotate(calc((var(--i) * (360deg / 8)) + 45deg));
+}
+.menu-nav.open .middleRight span {
+  transform: rotate(calc(var(--i) * (360deg / -8))) translateX(120px);
+}
+
+.menu-nav.open .bottomCenter span {
+  transform: rotate(calc(var(--i) * (360deg / -8))) translateY(120px); /* Move span down */
+}
+
+/* Ensure text inside the span does not rotate */
+.nav-item-text {
+  transform: none; /* Prevent text from rotating */
+  margin: 0;  /* Align text properly */
+}
+
+.nav-content span a {
+  text-decoration: none;
+}
+
+.nav-item-text{
+  transform: none;
+  position: absolute;
+}
+/* Icon styles - rotating icons */
+.nav-content span a i {
+  font-size: 24px;
+  color: #0e2431;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.middleRight span a i {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.middleLeft span a i {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.nav-content span a:hover i {
+  opacity: 1;
+}
+
+.toggle-btn {
+  background: #ffffff !important;
+  border: 2px solid #e0e0e0;
+}
+
+.toggle-btn p {
+  font-weight: bold;
+}

@@ -1,0 +1,5 @@
+# Node modules directory
+node_modules/
+
+# Build directory (if using a bundler like Webpack or Vite)
+dist/
